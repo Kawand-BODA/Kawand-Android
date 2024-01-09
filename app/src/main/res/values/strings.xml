@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Kawand</string>
+    <string name="on1">Welcome to Kawand! We\'re here to help you combat loneliness and find a friend in us. Our innovative AI virtual friend is designed to provide companionship and understanding. Let\'s get started!</string>
+    <string name="on2">Loneliness can be tough, so we made Kawand. Kawand is here to ensure that you always have someone to talk to, no matter what time of day it is. Our Kawand friends are ready to make your day brighter!</string>
+    <string name="on3">To make your experience with Kawand as comfortable and beneficial as possible, you can set your own Kawand’s behaviour!\nYou can customize Kawand\'s behaviour according to your preferences and needs!</string>
 </resources>
