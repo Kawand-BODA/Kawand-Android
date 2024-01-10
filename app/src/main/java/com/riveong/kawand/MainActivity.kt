@@ -11,6 +11,7 @@ import com.riveong.kawand.ui.activities.onBoarding.WelcomeScreen
 import com.riveong.kawand.ui.activities.onBoarding.WelcomeScreen2
 import com.riveong.kawand.ui.activities.onBoarding.WelcomeScreen3
 import com.riveong.kawand.ui.activities.onBoarding.WelcomeScreen4
+import com.riveong.kawand.ui.screens.logic.MainBoarding
 import com.riveong.kawand.ui.theme.KawandTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    WelcomeScreen4()
+                    MainBoarding()
                 }
             }
         }

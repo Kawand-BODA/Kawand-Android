@@ -22,11 +22,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.riveong.kawand.R
+import com.riveong.kawand.ui.screens.Screen
 import com.riveong.kawand.ui.theme.Primary
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(navHostController: NavHostController) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -52,7 +54,6 @@ fun WelcomeScreen() {
                 text = "Welcome 👋",
                 fontWeight = FontWeight.Bold,
                 fontSize = 28.sp,
-                color = Color.Black
             )
             Spacer(modifier = Modifier.height(20.dp))
             Text(
@@ -61,7 +62,10 @@ fun WelcomeScreen() {
 
             )
             Spacer(modifier = Modifier.height(14.dp))
-            OutlinedButton(onClick = { /*TODO*/ },
+            OutlinedButton(
+                onClick = {
+                    navHostController.navigate(Screen.On2.route)
+                          },
                 modifier = Modifier
                     .size(40.dp)
                     .align(Alignment.End),  //avoid the oval shape

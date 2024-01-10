@@ -22,11 +22,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.riveong.kawand.R
+import com.riveong.kawand.ui.screens.Screen
 import com.riveong.kawand.ui.theme.Primary
 
 @Composable
-fun WelcomeScreen2() {
+fun WelcomeScreen2(navHostController: NavHostController) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -51,17 +53,19 @@ fun WelcomeScreen2() {
             Text(
                 text = "Understanding Loneliness",
                 fontWeight = FontWeight.Bold,
-                fontSize = 28.sp,
+                fontSize = 25.sp,
 
             )
             Spacer(modifier = Modifier.height(20.dp))
             Text(
                 text = stringResource(R.string.on2),
                 fontSize = 16.sp,
-                color = Color.Black,
             )
             Spacer(modifier = Modifier.height(14.dp))
-            OutlinedButton(onClick = { /*TODO*/ },
+            OutlinedButton(
+                onClick = {
+                navHostController.navigate(Screen.On3.route)
+                          },
                 modifier = Modifier
                     .size(40.dp)
                     .align(Alignment.End),  //avoid the oval shape
